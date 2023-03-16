@@ -1,9 +1,13 @@
 const express = require("express");
 const app = express();
 const port = 8080;
+const {ashta} =require("./router/routing")
+
+
 
 //middleware
 app.use(express.json());
+app.use(ashta)
 
 
 //homepage routing
@@ -14,9 +18,13 @@ app.get("/", (req,res)=>{
 app.get("/api/v2/auth/generateMobileOTP", (req,res)=>{
     res.status(200).send({"contact no":"mobile number"});
 })
+
+
+
+
 //server port
 app.listen(port,()=>{
     console.log("server is running")
 })
 
-// https://cdn-api.co-vin.in/api/v2/auth/generateMobileOTP
+//https://cdn-api.co-vin.in/api/v2/auth/generateMobileOTP
