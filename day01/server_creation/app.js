@@ -12,6 +12,7 @@ app.use(ashta)
 
 //homepage routing
 // app.methods("routing path", "handler/ controler") // get post put delete
+
 app.get("/", (req,res)=>{
     res.status(200).send('<h1>hello</h1>');
 })
