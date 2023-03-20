@@ -1,3 +1,6 @@
+let db = []
+
+
 function home (req, res){
 try {
     res.status(200).send({ message: "its home page" })
@@ -12,6 +15,7 @@ function contact(req, res){
     res.status(200).send({ message: "its contact page" })
 }
 
+
 function validation(req, res) {
    try {
    res.status(200).send({ message:{"name":req.query.name , "email":req.query.email }})
@@ -22,6 +26,12 @@ function validation(req, res) {
    }
 
 }
+
+
+
+
+
+
 
 
 module.exports ={

@@ -5,7 +5,7 @@ exports.token = function (req, res, next) {
 
     if (x) {
         next()
-    } 
+    }
     else {
         res.status(401).send({ message: "not authorised 1" })
         return;
@@ -14,7 +14,7 @@ exports.token = function (req, res, next) {
 }
 
 exports.token2 = function (req, res, next) {
-    let x = true
+    let x = false
 
     if (x) {
         next()
@@ -32,10 +32,12 @@ exports.queryValidation = (req, res, next) => {
     let email = req.query.email
 
     if (!name) {
-        return res.send({ messge: "no name" });
+        res.send({ messge: "no name" })
+        return;
     }
     if (!email) {
-         return res.send({ message: "no email" })
+        res.send({ message: "no email" })
+        return;
     }
     next()
 }    

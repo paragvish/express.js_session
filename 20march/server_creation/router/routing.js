@@ -63,7 +63,10 @@ router.get("/signup", (req, res) => {
 
 })
 
-router.get("/validation", queryValidation, validation )
+router.get("/validation", queryValidation,validation )
+
+//to create
+// router.post('/create', middleweare , contrller)
 
 
 
